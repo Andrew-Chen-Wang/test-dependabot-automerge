@@ -13,7 +13,7 @@ jobs:
         id: waitforstatuschecks
         uses: "WyriHaximus/github-action-wait-for-status@master"
         with:
-          ignoreActions: dependabot
+          ignoreActions: automerge,WIP
           checkInterval: 30
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
