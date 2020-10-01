@@ -9,7 +9,7 @@ jobs:
     
     if: github.actor == 'dependabot[bot]'
     steps:
-      - name 'Wait for status checks'
+      - name: 'Wait for status checks'
         id: waitforstatuschecks
         with:
 	  ignoreActions: dependabot
