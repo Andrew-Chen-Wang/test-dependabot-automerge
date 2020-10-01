@@ -12,13 +12,14 @@ jobs:
       - name: 'Wait for status checks'
         id: waitforstatuschecks
         with:
-	  ignoreActions: dependabot
-	  checkInterval: 15
-	env:
-	  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: automerge
+          ignoreActions: dependabot
+          checkInterval: 30
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: 'automerge'
         uses: actions/github-script@0.2.0
-	if: steps.waitforstatuschecks.outputs.status == 'success'
+        if: steps.waitforstatuschecks.outputs.status == 'success'
         with:
           script: |
             github.pullRequests.createReview({
