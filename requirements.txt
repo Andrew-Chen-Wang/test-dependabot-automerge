@@ -1,4 +1,4 @@
-django==3.1.2
+django==3.1.6
 black==19
 django-cachalot==2.3.1
 django-debug-toolbar==3.1.1
